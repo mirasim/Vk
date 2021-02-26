@@ -5,13 +5,14 @@ import java.util.Date;
 public class Post {
 
     private int id;
+    private int ownerId;
     private int authorId;
     private int title;
     private String shortText;
     private String fullText;
 
     private Date publishDate;
-    private int likeCount;
+    private Likes likes;
     private int readCount;
     private int forwardCount;
     private CommentsInfo commentsInfo;
@@ -63,14 +64,6 @@ public class Post {
         this.publishDate = publishDate;
     }
 
-    public int getLikeCount() {
-        return likeCount;
-    }
-
-    public void setLikeCount(int likeCount) {
-        this.likeCount = likeCount;
-    }
-
     public int getReadCount() {
         return readCount;
     }
@@ -95,5 +88,20 @@ public class Post {
         this.commentsInfo = commentsInfo;
     }
 
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public Likes getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Likes likes) {
+        this.likes = likes;
+    }
 
 }
